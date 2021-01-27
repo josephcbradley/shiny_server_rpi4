@@ -10,20 +10,20 @@
 cd ~ || return
 
 # Update/Upgrade Raspberry Pi
-sudo apt-get -y update && sudo apt-get -y upgrade
+sudo apt -y update && sudo apt -y upgrade
 
 # Install R
-sudo apt-get -y install r-base
+#sudo apt-get -y install r-base
 
 # Install system libraries (dependences for some R packages)
 # Install cmake: https://github.com/rstudio/shiny-server/wiki/Building-Shiny-Server-from-Source#what-if-a-sufficiently-recent-version-of-cmake-isnt-available
-sudo apt-get -y install libssl-dev libcurl4-openssl-dev cmake
+#sudo apt-get -y install libssl-dev libcurl4-openssl-dev cmake
 
 # Install R Packages
-sudo su - -c "R -e \"install.packages('httpuv', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('plotly', repos='https://cran.rstudio.com/')\""
-sudo su - -c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
+#sudo su - -c "R -e \"install.packages('httpuv', repos='https://cran.rstudio.com/')\""
+#sudo su - -c "R -e \"install.packages('shiny', repos='https://cran.rstudio.com/')\""
+#sudo su - -c "R -e \"install.packages('plotly', repos='https://cran.rstudio.com/')\""
+#sudo su - -c "R -e \"install.packages('rmarkdown', repos='https://cran.rstudio.com/')\""
 
 # Install Shiny Server as per https://github.com/rstudio/shiny-server/issues/347
 ## Clone the Shiny Server repository from GitHub

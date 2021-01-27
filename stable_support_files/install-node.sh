@@ -3,13 +3,15 @@
 set -e
 
 # Config variables.
-# See e.g. https://nodejs.org/dist/v12.15.0/SHASUMS256.txt for checksum.
-NODE_SHA256=d26f81800cafcec54d35d9a79bfe9f2e3bf008c21c9653abe2493161bbffad92
+# Target file is https://nodejs.org/dist/latest-v12.x/node-v12.20.1-linux-armv7l.tar.xz
+# See e.g. https://nodejs.org/dist/latest-v12.x/SHASUMS256.txt for checksum.
+
+NODE_SHA256=d4b34dc939b34e0a888d69e01713c5ba42b5718bccf72e816eb4bd644cf6240e
 
 cd "$(dirname "$0")"
 cd ../..
 
-NODE_VERSION="12.19.0"
+NODE_VERSION="12.20.1"
 
 check_node_needed () {
   if [ -x ext/node/bin/node ]
